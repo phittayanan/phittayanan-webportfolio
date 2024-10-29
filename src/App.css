@@ -44,12 +44,14 @@ section {
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Increased shadow for depth */
     margin: 0 auto; /* Center the contact container */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .contact-left,
 .contact-right {
     flex: 1;
     padding: 40px; /* Reduced padding for better balance */
+    min-width: 300px; /* Minimum width for flex items */
 }
 
 /* Left side styling */
@@ -137,13 +139,21 @@ section {
     transform: scale(1.1); /* Slight scale effect on hover */
 }
 
+/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
+    section {
+        padding: 50px 10px; /* Reduced padding for smaller screens */
+    }
+
     .contact-container {
         flex-direction: column; /* Stack elements vertically */
+        padding: 20px; /* Reduced padding for better spacing */
     }
     
     .contact-left, .contact-right {
-        padding: 20px; /* Reduce padding for smaller screens */
+        width: 100%; /* Full width on mobile */
+        padding: 20px; /* Further reduce padding */
+        margin: 0; /* Remove margin for full width */
     }
 
     .contact-left h2 {
