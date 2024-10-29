@@ -1,0 +1,102 @@
+/* About Section Styling */
+#about {
+    background-color: #0b0b36;
+    padding: 80px 20px; /* Extra padding for spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Increased min-height for more balance */
+}
+
+.about-container {
+    padding: 60px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Enables wrapping for mobile */
+    max-width: 1200px; /* Constrained max-width for readability */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: #6c6f9c;
+    align-items: center;
+    gap: 30px; /* Space between elements */
+}
+
+/* Profile Picture Styling */
+.profile-picture {
+    flex: 1 1 200px; /* Flexible width and responsive */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Styling */
+.about-content {
+    flex: 2 1 400px; /* Flexible width for responsiveness */
+    color: #ffffff;
+}
+
+.about-content h2 {
+    font-size: 2.2rem; /* Scalable heading size */
+    margin-bottom: 20px;
+    color: #FFD700;
+    text-transform: uppercase; /* Consistent style */
+    letter-spacing: 1px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #f1f1f1;
+    line-height: 1.7; /* Better line height for readability */
+}
+
+/* Additional Information Styling */
+.additional-info {
+    margin-top: 20px;
+}
+
+.info-item {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+}
+
+.info-icon {
+    color: #FFD700;
+    font-size: 1.5rem; /* Larger icon for emphasis */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .about-content {
+        text-align: center;
+        margin-left: 0; /* Remove extra spacing on small screens */
+    }
+
+    .profile-picture img {
+        width: 180px;
+        height: 180px; /* Slightly smaller for mobile */
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem; /* Adjust heading for smaller screens */
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+}

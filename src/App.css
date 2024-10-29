@@ -1,0 +1,161 @@
+/* src/App.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: #f0f0f0;
+}
+
+/* Common styles for all sections */
+section {
+    min-height: 100vh; /* Ensures each section is at least the full height of the viewport */
+    padding: 100px 20px; /* Adds consistent padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Home section specific styles */
+.home {
+    background-color: #1abc9c; /* Light green */
+    color: white;
+}
+
+/* Contact section styling */
+#contact {
+    background-color: #0b0b36; /* Dark navy background */
+    color: #fff;
+    padding: 50px 20px; /* Increased padding for better spacing */
+    min-height: 20vh;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Increased shadow for depth */
+    margin: 0 auto; /* Center the contact container */
+}
+
+.contact-left,
+.contact-right {
+    flex: 1;
+    padding: 40px; /* Reduced padding for better balance */
+}
+
+/* Left side styling */
+.contact-left {
+    background-color: #7b1123; /* Burgundy color */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center contents */
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-left h2 {
+    font-size: 3em; /* Adjusted font size for better balance */
+    margin-bottom: 15px; /* Adjusted margin */
+}
+
+.contact-left p {
+    font-size: 1.5em; /* Adjusted font size for better readability */
+    margin-bottom: 25px; /* Adjusted margin */
+}
+
+.contact-left .cta-button {
+    background-color: #f0ad00; /* Yellow button */
+    color: #0b0b36;
+    padding: 12px 25px; /* Adjusted padding */
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Added transform for button hover */
+}
+
+.contact-left .cta-button:hover {
+    background-color: #e0a000;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Right side styling */
+.contact-right {
+    background-color: #0b0b36;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center contents vertically */
+    text-align: center; /* Center text */
+}
+
+.contact-right p {
+    font-size: 1.2em; /* Adjusted font size for better readability */
+    margin-bottom: 15px; /* Adjusted margin */
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #f0ad00; /* Yellow color for emphasis */
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Center social icons */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    margin-top: 30px;
+}
+
+.social-icons a {
+    margin: 0 15px; /* Adjusted margin for better spacing */
+    color: #fff;
+    font-size: 2.5em; /* Slightly reduced size for balance */
+    transition: color 0.3s, transform 0.3s; /* Added transform for icon hover */
+}
+
+.social-icons a:hover {
+    color: #f0ad00;
+    transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack elements vertically */
+    }
+    
+    .contact-left, .contact-right {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .contact-left h2 {
+        font-size: 2.5em; /* Smaller font size on mobile */
+    }
+
+    .contact-left p,
+    .contact-right p {
+        font-size: 1em; /* Smaller font size on mobile */
+    }
+
+    .social-icons a {
+        font-size: 2em; /* Smaller icons on mobile */
+    }
+}

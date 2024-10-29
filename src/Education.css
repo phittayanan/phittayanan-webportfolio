@@ -1,0 +1,127 @@
+/* General Styling */
+#education {
+    padding: 60px 20px; /* Adjusted padding */
+    text-align: center;
+    background-color: #0b0b36;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFD700;
+}
+
+.container p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+/* Timeline Styling */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.timeline-item {
+    background-color: #7b1123;
+    border-radius: 15px;
+    padding: 25px;
+    width: 80%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.timeline-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffd700;
+    background-color: #ffffff; /* Add white background */
+    transition: transform 0.3s;
+}
+
+.timeline-item:hover .timeline-logo {
+    transform: scale(1.1);
+}
+
+.date {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 215, 0, 0.85);
+    margin-bottom: 10px;
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    margin: 12px 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.timeline-item p {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+/* Vertical Timeline Line Styling */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: rgba(255, 215, 0, 0.85);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 215, 0, 0.85);
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -8px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .timeline-item {
+        width: 90%;
+    }
+
+    .timeline {
+        gap: 30px;
+    }
+
+    .timeline-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
