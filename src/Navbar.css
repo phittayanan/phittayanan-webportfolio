@@ -74,6 +74,7 @@
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
     }
 
     .navbar-right {
@@ -81,21 +82,27 @@
     }
 
     .menu-icon {
-        display: block;
+        display: block; /* Show the menu icon on mobile */
     }
 
     .navbar-menu {
         flex-direction: column;
         background-color: #2C3E50;
         position: absolute;
-        top: 60px;
+        top: 60px; /* Adjust this if your navbar height changes */
         right: 0;
         width: 100%;
-        display: none;
+        display: none; /* Initially hide the menu */
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        max-height: 0; /* Initially collapsed */
+        overflow: hidden; /* Hide overflow */
+        opacity: 0; /* Make it invisible */
     }
 
     .navbar-menu.active {
-        display: flex;
+        display: flex; /* Show the menu when active */
+        max-height: 300px; /* Set a max height to allow space for menu items */
+        opacity: 1; /* Make it visible */
     }
 
     .navbar-menu li {
