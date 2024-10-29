@@ -1,13 +1,14 @@
 import React from 'react';
 import './About.css';
 import { FaBirthdayCake, FaMusic, FaCode, FaGamepad, FaPlane } from 'react-icons/fa'; // You can use any icon library
+import profile from '/src/assets/BB73521F-E29C-4E9B-95A4-710BF574FC99.jpg';
 
 const About = () => {
     return (
         <section id="about">
             <div className="about-container">
                 <div className="profile-picture">
-                    <img src="src/assets/BB73521F-E29C-4E9B-95A4-710BF574FC99.jpg" alt="Profile" />
+                    <img src={profile} alt="Phittayanan"/>
                 </div>
                 <div className="about-content">
                     <h2>About Me</h2>
